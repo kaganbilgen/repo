@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Footer () {
     return (
-        <h1>Footer Component</h1>
+        <footer>
+            <p>@mira-hollé</p>
+        </footer>
     )
 }
