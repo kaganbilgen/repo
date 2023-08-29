@@ -37,9 +37,22 @@
   }
 }
 
+
 .nav-btn {
-  text-decoration: none;
+  display: inline;
+  text-decoration: none;  
   color: #4f4f4d;
+  height: 100%;
+  padding: 1.25rem 0.75rem;
+  font-weight: bold;
+  border-radius: 15%;
+
+}
+
+nav a:hover {
+  background-color: #fae4d5;
+  text-decoration:underline;
+  cursor: pointer;
 }
 
 .site-wrapper {
@@ -47,3 +60,4 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
