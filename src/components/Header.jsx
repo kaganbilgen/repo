@@ -11,9 +11,15 @@ export default function Header () {
             <nav>
                 <NavLink
                     className="nav-btn"
-                    to="/about"
+                    to="/impressum"
                 >
-                    About
+                    Impressum
+                </NavLink>
+                <NavLink
+                    className="nav-btn"
+                    to="/prices"
+                >
+                    Prices
                 </NavLink>
                 <NavLink
                     className="nav-btn"
