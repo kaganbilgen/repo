@@ -20,7 +20,7 @@ main {
 
 /* HEADER */
 
-header {
+.header-wrapper {
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@ header > nav {
   text-decoration: none;
 }
 
-header >   .home-logo > img {
+.header-wrapper >  .home-logo > img {
   height: 3rem;
 }
 
