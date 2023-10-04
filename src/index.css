@@ -12,6 +12,7 @@ body {
 .site-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   min-height: 100vh;
   width: 100vw;
 }
@@ -63,31 +64,57 @@ nav a:hover {
 .header-wrapper >  .home-logo > img {
   height: 3rem;
 }
-.sidebar-container {
-  position: fixed;
-  padding: 0.5rem;
-  height: 100vh;
-  left: 0;
-  top: 0; 
-}
-
-.sidebar-links{
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-  align-items: flex-start;
-}
 
 
 .navbar {
   display: none;
 }
 
+/* SIDEBAR */
+
+
+.sidebar-links {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: 100vh;
+  left:-100%;
+  top: 0; 
+}
+
+.sidebar-links-active{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  background-color: #ead8cc;
+  height: 100vh;
+  width: 45vw;
+  left: 0;
+  transition: 350ms;
+  padding-top: 2vh;
+}
+
+.sidebar-nav-btn {
+  display: inline;
+  text-decoration: none;  
+  color: #4f4f4d;
+  padding: 1.25rem 0.75rem;
+  font-weight: bold;
+  border-radius: 15%;
+
+}
+
+.sidebar-nav-btn:hover {
+  background-color: #fae4d5;
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+
 /* FOOTER */
 
 footer {
-  display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
@@ -105,7 +132,10 @@ footer {
   .sidebar {
     display: none;
   }
+
   .navbar {
     display: block;
   }
 }
+
+/* HOME */
