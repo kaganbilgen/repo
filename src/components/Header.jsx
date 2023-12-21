@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import logo from '../images/mira-holle-logo.png'
+import logo from '../images/weiss_mira_mit.png'
 
 export default function Header(props) {
     return (
@@ -10,32 +10,32 @@ export default function Header(props) {
                 <div className="sidebar">
                     <Sidebar />
                 </div>
+                <NavLink to="/" className="home-logo">
+                    <img src={logo} alt="mira holle logo" />
+                </NavLink>
                 <nav className="navbar">
                     <NavLink
                         id="impressum"
-                        className="nav-btn"
+                        className={({isActive}) => isActive ? "active-link" : "nav-btn"}
                         to="/impressum"
                     >
                         Impressum
                     </NavLink>
                     <NavLink
                         id="prices"
-                        className="nav-btn"
+                        className={({isActive}) => isActive ? "active-link" : "nav-btn"}
                         to="/prices"
                     >
                         Prices
                     </NavLink>
                     <NavLink
                         id="contact"
-                        className="nav-btn"
+                        className={({isActive}) => isActive ? "active-link" : "nav-btn"}
                         to="/contact"
                     >
                         Contact
                     </NavLink>
                 </nav>
-                <NavLink to="/" className="home-logo">
-                    <img src={logo} alt="mira holle logo" />
-                </NavLink>
             </div>
         </header>
     )

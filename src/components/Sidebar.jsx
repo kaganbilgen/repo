@@ -7,7 +7,7 @@ export default function Sidebar() {
     return (
         <div className="sidebar-container">
             <div className="sidebar-hamburger">
-                <Hamburger toggled={isOpen} toggle={setOpen} />
+                <Hamburger toggled={isOpen} toggle={setOpen} className="sidebar"/>
             </div>
             <nav className={isOpen ? "sidebar-links-active" : "sidebar-links"}>
                 <NavLink 
