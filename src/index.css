@@ -28,16 +28,30 @@ main {
 
 /* HEADER */
 
-.header-wrapper {
+header {
   font-size: 1rem;
   display: flex;
+  background: linear-gradient(90deg, #373736 0%, #373837 25%, #683737 100%);
+  box-shadow: 0rem 0.3rem 0.3rem #373736;
+  padding:0 1.5rem ;
   justify-content: space-between;
   align-items: center;
-  padding:0 0.25rem ;
-  height: 6rem;
-  background: linear-gradient(90deg, #373736 0%, #373837 50%, #683737 100%);
-  box-shadow: 0rem 0.3rem 0.3rem #373736;
   z-index: 1;
+  height: 12vh;
+}
+
+.navbar-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.langbar-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.25rem 0;
 }
 
 header > nav {
@@ -65,15 +79,15 @@ a.active-link {
 }
 
 nav a:hover {
-  border-top: solid 1px whitesmoke;
-  border-bottom: solid 1px whitesmoke;
+  border-top: solid 2px whitesmoke;
+  border-bottom: solid 2px whitesmoke;
   cursor: pointer;
 }
 
 
 
-.header-wrapper >  .home-logo > img {
-  height: 6rem;
+.navbar-wrapper > .home-logo > img {
+  height: 12vh;
 }
 
 
@@ -103,11 +117,12 @@ nav a:hover {
   display: flex;
   position: fixed;
   flex-direction: column;
-  background: linear-gradient(90deg, #373736 0%, #373837 50%);
+  background: linear-gradient(90deg, #373736 0%, #683737 325%);
   height: 100vh;
-  width: 45vw;
+  width: 60vw;
   left: 0;
-  transition: 400ms;
+  transition: 600ms;
+  margin-top: 3vh;
   padding-top: 4vh;
   z-index: 0;
 }
@@ -116,7 +131,7 @@ nav a:hover {
   display: inline;
   text-decoration: none;  
   color: whitesmoke;
-  padding: 1.5rem 0.75rem;
+  padding: 1.5rem 0rem;
   margin: 0 1rem;
   font-weight: bold;
   border-bottom: solid 1px whitesmoke;
@@ -140,8 +155,8 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  background: linear-gradient(90deg, #373736 0%, #373837 50%, #683737 100%);
-  height: 3.5rem;
+  background: linear-gradient(90deg, #373736 0%, #373837 35%, #683737 100%);
+  height: 7vh;
   color: #4f4f4d;
   text-align: center;
   box-shadow: 0rem -0.3rem 0.3rem #373736;
@@ -159,16 +174,15 @@ footer {
     display: block;
     padding-left: 2rem;
   }
-  .header-wrapper {
-    justify-content: flex-start;
-    gap: 3rem;
-    padding: 4rem 2rem;
+  header {
+    height: 14vh;
+    padding: 0rem 2rem;
   }
 
   nav a:active {
     padding: 2rem 0.75rem;
-    border-top: solid 1.5px #683737;
-    border-bottom: solid 1.5px #683737;
+    border-top: solid 2px #683737;
+    border-bottom: solid 2px #683737;
     transition: 250ms;
   }
   

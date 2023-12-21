@@ -3,12 +3,12 @@ import { useOutletContext } from "react-router-dom";
 
 
 export default function Contact () {
-    const {hu, en} = useOutletContext()
+    const lang = useOutletContext()
     return (
         <div>
-            {en ? <h1>Contact Page EN</h1>: hu ?
-                    <h1>Contact Page HU</h1>:
-                    <h1>Contact Page DE</h1>}
+            {lang==="de" ? <h1>Kontakt DE</h1>: 
+                lang==="en" ?   <h1>Contact EN</h1>:
+                <h1>Contact PaGe HU</h1>}
         </div>
     )
 }

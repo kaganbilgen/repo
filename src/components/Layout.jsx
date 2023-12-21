@@ -4,27 +4,16 @@ import Header from "./Header"
 import Footer from "./Footer"
 
 export default function Layout() {
-    const [ deLang, setDeLang] = React.useState(true)
-    const [ huLang, setHuLang] = React.useState(false)
-    const [ enLang, setEnLang] = React.useState(false)
-    const langObj={
-        de: deLang,
-        hu: huLang,
-        en: enLang
-    }
-    const setLangObj={
-        setDe: setDeLang,
-        setHu: setHuLang,
-        setEn: setEnLang
-    }
-
+    const [ lang, setLang] = React.useState("de")
+   
     return (
         <div className="site-wrapper">
             <Header
-               lang = {{langObj, setLangObj}}  
+               currLang = {lang}
+               setCurrLang = {setLang} 
             />
             <main>
-                <Outlet context={langObj} />
+                <Outlet context={lang} />
             </main>
             <Footer />
         </div>

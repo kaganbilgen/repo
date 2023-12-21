@@ -2,7 +2,26 @@ import React from "react"
 import { NavLink} from "react-router-dom"
 import Hamburger from 'hamburger-react'
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+    let pricesBtn, contactBtn, impressumBtn, privacyBtn
+
+    if (props.lang === "de") {
+        pricesBtn = "Preise"
+        contactBtn = "Kontakt"
+        impressumBtn = "Impressum"
+        privacyBtn = "Datenschutzerklärung"
+    }else if (props.lang === "en") {
+        pricesBtn = "Prices"
+        contactBtn = "Contact"
+        impressumBtn = "Impressum"
+        privacyBtn = "Privacy"
+    }else if (props.lang === "hu"){
+        pricesBtn = "Prices HU"
+        contactBtn = "Contact HU"
+        impressumBtn = "Impressum HU"
+        privacyBtn = "Privacy HU"
+    }
+
     const [isOpen, setOpen] = React.useState(false)
     return (
         <div className="sidebar-container">
@@ -16,7 +35,7 @@ export default function Sidebar() {
                     className="sidebar-nav-btn"
                     to="/prices"
                 >
-                    Preise
+                    {pricesBtn}
                 </NavLink>
                 <NavLink 
                     onClick={()=> setOpen(false)}
@@ -24,7 +43,7 @@ export default function Sidebar() {
                     className="sidebar-nav-btn"
                     to="/contact"
                 >
-                    Kontakt
+                    {contactBtn}
                 </NavLink>
                 <NavLink 
                     onClick={()=> setOpen(false)}
@@ -32,7 +51,15 @@ export default function Sidebar() {
                     className="sidebar-nav-btn"
                     to="/impressum"
                 >
-                    Impressum
+                    {impressumBtn}
+                </NavLink>
+                <NavLink 
+                    onClick={()=> setOpen(false)}
+                    id="privacy"
+                    className="sidebar-nav-btn"
+                    to="/privacy"
+                >
+                    {privacyBtn}
                 </NavLink>
             </nav>
         </div>
