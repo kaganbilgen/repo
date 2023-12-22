@@ -1,14 +1,15 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
+import lang from "../assets/lang"
 
 
 export default function Contact () {
-    const lang = useOutletContext()
+    const currLang = useOutletContext()
     return (
-        <div>
-            {lang==="de" ? <h1>Kontakt DE</h1>: 
-                lang==="en" ?   <h1>Contact EN</h1>:
-                <h1>Contact PaGe HU</h1>}
+        <div >
+            {currLang==="de" ? lang.de.contact: 
+                currLang==="en" ? lang.en.contact:
+                lang.hu.contact}
         </div>
     )
 }

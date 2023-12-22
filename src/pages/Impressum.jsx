@@ -1,14 +1,15 @@
 import React from "react";
 import { useOutletContext } from "react-router-dom";
+import lang from "../assets/lang"
 
 
 export default function Impressum () {
-    const lang = useOutletContext()
+    const currLang = useOutletContext()
     return (
         <div>
-            {lang==="de" ? <h1>Impressum DE</h1>: 
-                lang==="en" ?   <h1>Impressum EN</h1>:
-                <h1>Impressum PaGe HU</h1>}
+            {currLang==="de" ? lang.de.impressum: 
+                currLang==="en" ? lang.en.impressum:
+                lang.hu.impressum}
         </div>
     )
 }
