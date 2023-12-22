@@ -16,10 +16,10 @@ export default function Sidebar(props) {
         impressumBtn = "Impressum"
         privacyBtn = "Privacy"
     }else if (props.lang === "hu"){
-        pricesBtn = "Prices HU"
-        contactBtn = "Contact HU"
-        impressumBtn = "Impressum HU"
-        privacyBtn = "Privacy HU"
+        pricesBtn = "Árazás"
+        contactBtn = "Kapcsolatfelvétel"
+        impressumBtn = "Impresszum"
+        privacyBtn = "Adatvédelem"
     }
 
     const [isOpen, setOpen] = React.useState(false)

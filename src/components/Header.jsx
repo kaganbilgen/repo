@@ -17,13 +17,11 @@ export default function Header(props) {
         impressumBtn = "Impressum"
         privacyBtn = "Privacy"
     }else if (props.currLang === "hu"){
-        pricesBtn = "Prices HU"
-        contactBtn = "Contact HU"
-        impressumBtn = "Impressum HU"
-        privacyBtn = "Privacy HU"
+        pricesBtn = "Árazás"
+        contactBtn = "Kapcsolatfelvétel"
+        impressumBtn = "Impresszum"
+        privacyBtn = "Adatvédelem"
     }
-
-    console.log(props.currLang)
 
     return (
         <header>
