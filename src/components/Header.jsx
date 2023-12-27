@@ -5,6 +5,7 @@ import logo from '../assets/logos/weiss_mira_mit.png'
 
 export default function Header(props) {
     let pricesBtn, contactBtn, impressumBtn, privacyBtn
+    const [navbar, setNavbar] = React.useState(false)
 
     if (props.currLang === "de") {
         pricesBtn = "Preise"
@@ -23,8 +24,18 @@ export default function Header(props) {
         privacyBtn = "Adatvédelem"
     }
 
+    function resizeHeader() {
+        if (window.scrollY >= 5) {
+            setNavbar(true)
+        }else {
+            setNavbar(false)
+        }
+    }
+
+    window.addEventListener('scroll', resizeHeader)
+
     return (
-        <header>
+        <header className={navbar ? "navbar-resize":""}>
             <div className="navbar-wrapper">
                 <div className="sidebar-wrapper">
                     <div className="sidebar">
@@ -33,7 +44,7 @@ export default function Header(props) {
                         />
                     </div>
                 </div>
-                <NavLink to="/" className="home-logo">
+                <NavLink to="/" className={navbar ? "home-logo-resize" : "home-logo"}>
                     <img src={logo} alt="mira holle logo" />
                 </NavLink>
                 <nav className="navbar">

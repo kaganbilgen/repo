@@ -43,6 +43,15 @@ header {
   align-items: center;
   z-index: 1;
   height: 12vh;
+  transition: 400ms;
+}
+
+.navbar-resize {
+  position: fixed;
+  height: 8vh;
+  top: 0;
+  width: 100%;
+  transition: 600ms;
 }
 
 .navbar-wrapper {
@@ -95,6 +104,12 @@ nav a:hover {
 
 .home-logo > img  {
   height: 12vh;
+  transition: 600ms;
+}
+
+.home-logo-resize > img {
+  height: 8vh;
+  transition: 600ms;
 }
 
 
@@ -125,14 +140,16 @@ a.active-sidebar-link:hover {
 
 
 
-.sidebar-links {
+.sidebar-inactive {
   display: flex;
   position: fixed;
   flex-direction: column;
   padding: 0.5rem;
   height: 100vh;
   left:-100%;
-  top: 0; 
+  transition: 600ms;
+  padding-top: 4vh;
+  z-index: -1;
 }
 
 .sidebar-active{
@@ -147,6 +164,7 @@ a.active-sidebar-link:hover {
   padding-top: 4vh;
   z-index: -1;
 }
+
 
 .sidebar-nav-btn {
   display: inline;
@@ -227,6 +245,13 @@ footer {
     display: block;
     padding-left: 2rem;
   }
+
+  .navbar-wrapper {
+    display: flex;
+    gap: 4rem;
+    z-index: 1;
+  }
+  
   header {
     height: 14vh;
     padding: 0rem 2rem;

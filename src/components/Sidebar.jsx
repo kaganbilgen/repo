@@ -3,6 +3,23 @@ import { NavLink} from "react-router-dom"
 import Hamburger from 'hamburger-react'
 
 export default function Sidebar(props) {
+    const [open, setOpen] = React.useState(false)
+    let sidebarRef = React.useRef()
+
+    React.useEffect(()=> {
+        let handler = (e)=> {
+            if(!sidebarRef.current.contains(e.target)){
+                setOpen(false)
+            }
+        }
+    
+        document.addEventListener("mousedown", handler)
+
+        return () => {
+            document.removeEventListener("mousedown", handler)
+        }
+    })
+
     let pricesBtn, contactBtn, impressumBtn, privacyBtn
 
     if (props.lang === "de") {
@@ -22,13 +39,13 @@ export default function Sidebar(props) {
         privacyBtn = "Adatvédelem"
     }
 
-    const [isOpen, setOpen] = React.useState(false)
+
     return (
-        <div className="sidebar-container">
+        <div className="sidebar-container" ref={sidebarRef}>
             <div className="sidebar-hamburger">
-                <Hamburger toggled={isOpen} toggle={setOpen} className="sidebar"/>
+                <Hamburger toggled={open} toggle={setOpen} className="sidebar"/>
             </div>
-            <nav className={isOpen ? "sidebar-active" : "sidebar-links"}>
+            <nav className={open ? "sidebar-active" : "sidebar-inactive"}>
                 <NavLink 
                     onClick={()=> setOpen(false)}
                     id="impressum"
