@@ -61,14 +61,31 @@ header {
   z-index: 1;
 }
 
-.langbar-wrapper {
+.social-langbar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
   height: 100%;
+}
+
+.langbar-wrapper {
   display: flex;
   gap: 0.5rem;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  padding: 0.25rem 0;
+  justify-self: flex-start;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0;
+}
+
+.social-buttons > a > img {
+  height: 1.5rem;
+  filter: invert(18%) sepia(5%) saturate(120%) hue-rotate(22deg) brightness(99%) contrast(90%);
+  cursor: pointer;
 }
 
 .langbar-wrapper > button {

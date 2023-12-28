@@ -73,7 +73,7 @@ export default function Sidebar(props) {
                 <NavLink 
                     onClick={()=> setOpen(false)}
                     id="privacy"
-                    className="sidebar-nav-btn"
+                    className={({isActive}) => isActive ? "active-sidebar-link" : "sidebar-nav-btn"}
                     to="/privacy"
                 >
                     {privacyBtn}

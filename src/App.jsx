@@ -7,7 +7,7 @@ import Prices from './pages/Prices';
 import Contact from './pages/Contact'
 import Impressum from './pages/Impressum'
 import Privacy from './pages/Privacy'
-import NotFound from './NotFound';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
