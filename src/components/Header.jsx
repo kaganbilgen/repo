@@ -1,10 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import logo from '../assets/logos/weiss_mira_mit.png'
+import logo from '../assets/logos/4C_mira_mit.png'
 import fbIcon from '../assets/icons/5305154_fb_facebook_facebook logo_icon.svg'
 import liIcon from '../assets/icons/5305157_connection_linkedin_network_linkedin logo_icon.svg'
-import instIcon from '../assets/icons/5335781_camera_instagram_social media_instagram logo_icon.svg'
 
 export default function Header(props) {
     let pricesBtn, contactBtn, impressumBtn, privacyBtn
@@ -88,9 +87,8 @@ export default function Header(props) {
                     <button onClick={() => (props.setCurrLang("hu"))}>hu</button>
                 </div>
                 <div className="social-buttons">
-                    <a href=""><img src={fbIcon} /></a>
-                    <a href=""><img src={liIcon} /></a>
-                    <a href=""><img src={instIcon} /></a>
+                    <a href="https://www.facebook.com/miraholle/"><img src={fbIcon} /></a>
+                    <a href="https://at.linkedin.com/in/mira-holle"><img src={liIcon} /></a>
                 </div>
             </div>
         </header>

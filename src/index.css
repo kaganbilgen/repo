@@ -33,10 +33,10 @@ main {
 
 /* HEADER */
 
-header {
+header {  
   font-size: 1rem;
   display: flex;
-  background: linear-gradient(90deg, #373736 65%, #683737 80%);
+  background-color: whitesmoke;
   box-shadow: 0rem 0.3rem 0.3rem #373736;
   padding:0 1.5rem ;
   justify-content: space-between;
@@ -84,7 +84,6 @@ header {
 
 .social-buttons > a > img {
   height: 1.5rem;
-  filter: invert(18%) sepia(5%) saturate(120%) hue-rotate(22deg) brightness(99%) contrast(90%);
   cursor: pointer;
 }
 
@@ -141,8 +140,8 @@ nav a:hover {
 }
 
 a.active-sidebar-link {
-  border-bottom: solid 2px #683737;
-  color: whitesmoke;
+  border-bottom: solid 2px #ECD9CD;
+  color: #37393a;
   font-weight: bold;
   padding: 1.5rem 0rem;
   margin: 0 1rem;
@@ -151,7 +150,7 @@ a.active-sidebar-link {
 }
 
 a.active-sidebar-link:hover {
-  border-bottom: solid 2px #683737;
+  border-bottom: solid 2px #ECD9CD;
   border-top: none;
 }
 
@@ -173,7 +172,7 @@ a.active-sidebar-link:hover {
   display: flex;
   position: fixed;
   flex-direction: column;
-  background-color: #373736;
+  background-color: lightgrey;
   height: 100vh;
   width: 60vw;
   left: 0;
@@ -186,16 +185,16 @@ a.active-sidebar-link:hover {
 .sidebar-nav-btn {
   display: inline;
   text-decoration: none;  
-  color: whitesmoke;
+  color: #37393a;
   padding: 1.5rem 0rem;
   margin: 0 1rem;
   font-weight: bold;
-  border-bottom: solid 1px whitesmoke;
+  border-bottom: solid 1px #37393a;
 }
 
 .sidebar-nav-btn:hover {
   border-top: none;
-  border-color: #683737;
+  border-color: #ecd9cd;
   cursor: pointer;
 }
 
@@ -211,7 +210,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  background: linear-gradient(90deg, #373736 0%, #373837 35%, #683737 100%);
+  background: linear-gradient(90deg, #373736 0%, #373837 35%, #ecd9cd 100%);
   height: 7vh;
   color: #4f4f4d;
   text-align: center;
@@ -276,15 +275,15 @@ footer {
 
   nav a:active {
     padding: 2rem 0.75rem;
-    border-top: solid 2px #683737;
-    border-bottom: solid 2px #683737;
+    border-top: solid 2px #ecd9cd;
+    border-bottom: solid 2px #ecd9cd;
     transition: 250ms;
   }
 
   a.active-link {
     padding: 2rem 0.75rem;
-    border-top: solid 2px #683737;
-    border-bottom: solid 2px #683737;
+    border-top: solid 2px #ecd9cd;
+    border-bottom: solid 2px #ecd9cd;
     text-decoration: none;
     color: whitesmoke;
     font-weight: bold;
