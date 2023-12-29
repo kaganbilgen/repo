@@ -85,6 +85,7 @@ header {
 .social-buttons > a > img {
   height: 1.5rem;
   cursor: pointer;
+  filter: invert(23%) sepia(3%) saturate(404%) hue-rotate(156deg) brightness(89%) contrast(94%);
 }
 
 .langbar-wrapper > button {
@@ -92,7 +93,7 @@ header {
   border: none;
   cursor: pointer;
   text-decoration: underline;
-  color: #d6dadf;
+  color: gray;
 }
 
 header > nav {
@@ -103,7 +104,7 @@ header > nav {
 .nav-btn {
   display: inline;
   text-decoration: none;  
-  color: whitesmoke;
+  color: #37393a;
   height: 100%;
   padding: 1.25rem 0.75rem;
   font-weight: bold;  
@@ -111,8 +112,8 @@ header > nav {
 }
 
 nav a:hover {
-  border-top: solid 2px whitesmoke;
-  border-bottom: solid 2px whitesmoke;
+  border-top: solid 2px #ecd9cd;
+  border-bottom: solid 2px #ecd9cd;
   cursor: pointer;
 }
 
@@ -136,11 +137,11 @@ nav a:hover {
 /* SIDEBAR */
 
 .sidebar {
-  color: whitesmoke;
+  color: #37393a;
 }
 
 a.active-sidebar-link {
-  border-bottom: solid 2px #ECD9CD;
+  border-bottom: solid 2px #37393a;
   color: #37393a;
   font-weight: bold;
   padding: 1.5rem 0rem;
@@ -150,7 +151,7 @@ a.active-sidebar-link {
 }
 
 a.active-sidebar-link:hover {
-  border-bottom: solid 2px #ECD9CD;
+  border-bottom: solid 2px #37393a;
   border-top: none;
 }
 
@@ -172,7 +173,7 @@ a.active-sidebar-link:hover {
   display: flex;
   position: fixed;
   flex-direction: column;
-  background-color: lightgrey;
+  background-color: whitesmoke;
   height: 100vh;
   width: 60vw;
   left: 0;
@@ -189,12 +190,12 @@ a.active-sidebar-link:hover {
   padding: 1.5rem 0rem;
   margin: 0 1rem;
   font-weight: bold;
-  border-bottom: solid 1px #37393a;
+  border-bottom: solid 1px gray;
 }
 
 .sidebar-nav-btn:hover {
   border-top: none;
-  border-color: #ecd9cd;
+  border-color: #37393a;
   cursor: pointer;
 }
 
@@ -210,8 +211,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  background: linear-gradient(90deg, #373736 0%, #373837 35%, #ecd9cd 100%);
-  height: 7vh;
+  background-color: whitesmoke;
   color: #4f4f4d;
   text-align: center;
   box-shadow: 0rem -0.3rem 0.3rem #373736;
@@ -275,17 +275,17 @@ footer {
 
   nav a:active {
     padding: 2rem 0.75rem;
-    border-top: solid 2px #ecd9cd;
-    border-bottom: solid 2px #ecd9cd;
+    border-top: solid 2px #37393a;
+    border-bottom: solid 2px #37393a;
     transition: 250ms;
   }
 
   a.active-link {
     padding: 2rem 0.75rem;
-    border-top: solid 2px #ecd9cd;
-    border-bottom: solid 2px #ecd9cd;
+    border-top: solid 2px #37393a;
+    border-bottom: solid 2px #37393a;
     text-decoration: none;
-    color: whitesmoke;
+    color: #37393a;
     font-weight: bold;
   }
   
