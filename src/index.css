@@ -281,12 +281,13 @@ footer {
   }
 
   a.active-link {
-    padding: 2rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     border-top: solid 2px #37393a;
     border-bottom: solid 2px #37393a;
     text-decoration: none;
     color: #37393a;
     font-weight: bold;
+    transition: 250ms;
   }
   
 }
